@@ -16,7 +16,7 @@ SELECT model_id,
 FROM review_cycles
 GROUP BY model_id;
 
---34.op 3 departments by number of ‘High Risk’ models
+--34.Top 3 departments by number of ‘High Risk’ models
 SELECT department, COUNT(*) AS high_risk_count
 FROM models
 WHERE risk_level = 'High'
