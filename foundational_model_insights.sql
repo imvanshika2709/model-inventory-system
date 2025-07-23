@@ -35,7 +35,7 @@ FROM validation_reports
 WHERE status = 'Action Required';
 
 -- Query 9: Average performance score per model
-SELECT model_id, AVG(performance_score) AS avg_score
+SELECT model_id, ROUND(AVG(performance_score),3) AS avg_score
 FROM model_performance
 GROUP BY model_id;
 
